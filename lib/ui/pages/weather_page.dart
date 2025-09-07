@@ -38,7 +38,7 @@ class _WeatherPageState extends State<WeatherPage> {
   Future<void> _fetchWeather(String city) async {
     if (city.trim().isEmpty) {
       setState(() {
-        _errorMessage = 'Por favor, digite o nome de uma cidade';
+        _errorMessage = 'Por favor, digite o nome de uma cidade ';
       });
       return;
     }
@@ -61,13 +61,13 @@ class _WeatherPageState extends State<WeatherPage> {
         });
       } else {
         setState(() {
-          _errorMessage = 'Cidade não encontrada';
+          _errorMessage = 'Cidade não encontrada ';
           _isLoading = false;
         });
       }
     } catch (e) {
       setState(() {
-        _errorMessage = 'Erro de conexão. Verifique sua internet.';
+        _errorMessage = 'Erro de conexão. Verifique sua internet. ';
         _isLoading = false;
       });
     }
@@ -125,7 +125,8 @@ class _WeatherPageState extends State<WeatherPage> {
                         MainWeatherCard(
                           weatherData: _weatherData!,
                           color: _getWeatherColor(
-                              _weatherData!['weather'][0]['main']),
+                            _weatherData!['weather'][0]['main'],
+                          ),
                         ),
                         const SizedBox(height: 24),
                         DetailsGrid(weatherData: _weatherData!),

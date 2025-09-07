@@ -32,7 +32,7 @@ class WeatherIcon extends StatelessWidget {
     return Icon(
       _getIconData(weatherMain),
       size: 64,
-      color: Colors.white,
+      color: const Color.fromARGB(255, 251, 247, 247),
     );
   }
 }

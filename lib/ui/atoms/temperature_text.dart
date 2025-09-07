@@ -10,9 +10,9 @@ class TemperatureText extends StatelessWidget {
     return Text(
       '$temperature°C',
       style: Theme.of(context).textTheme.displayLarge?.copyWith(
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
-          ),
+        color: const Color.fromARGB(255, 244, 242, 242),
+        fontWeight: FontWeight.bold,
+      ),
     );
   }
 }
